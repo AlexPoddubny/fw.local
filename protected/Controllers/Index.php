@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use App\Models\Author;
+use App\Models\NewsArticle;
 use T4\Mvc\Controller;
 
 class Index
@@ -10,7 +12,7 @@ class Index
 
     public function actionDefault()
     {
-		$this->data->item = 'Test';
+    	$this->data->article = NewsArticle::findByPK(1);
     }
 
 }
